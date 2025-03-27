@@ -88,8 +88,8 @@ void app_main(void)
             senha_escrita[posicao_da_senha] = '\0';  // Garante que a string termine corretamente
 
             // Atualiza LCD com a máscara de asteriscos (****)
-            sprintf(escrever, "****");  // A string escrita é sempre "****"
-            escreve_lcd(2, 0, escrever);  // Exibe a máscara no LCD
+            sprintf(escrever, "*");  // A string escrita é sempre "****"
+            escreve_lcd(2, posicao_da_senha, escrever);  // Exibe a máscara no LCD
         }
         // Verifica se a senha foi digitada e o sinal "=" foi pressionado
         else if (tecla == '=' && posicao_da_senha == 4)  // Se pressionado "=" e 4 caracteres foram digitados
